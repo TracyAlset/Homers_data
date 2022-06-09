@@ -9999,3 +9999,16 @@ female,no,25800,oppose,60,61,1,1
 male,no,52800,favor,71.7,74,2.299999999999997,85
 male,no,20300,oppose,76.2,79,2.799999999999997,94
 female,no,5600,oppose,68.2,70,1.7999999999999972,7
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tidyverse)
+require(lattice)
+```
+
+```{r}
+Homers_data <- read.csv(file="Homers_data.csv")
+my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
+densityplot(my1000,main="original data")
+
+```
